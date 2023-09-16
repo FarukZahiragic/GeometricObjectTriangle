@@ -14,7 +14,7 @@ public class Main {
         double side3 = input.nextDouble();
 
         System.out.print("Enter color of triangle: ");
-        String color = input.nextLine();
+        String color = input.next();
 
         System.out.print("Is the triangle filled? ");
         boolean filled = input.nextBoolean();
