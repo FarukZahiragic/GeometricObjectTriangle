@@ -15,6 +15,19 @@ public class Main {
 
         System.out.print("Enter color of triangle: ");
         String color = input.nextLine();
+
+        System.out.print("Is the triangle filled? ");
+        boolean filled = input.nextBoolean();
+
+        Triangle triangle = new Triangle(side1, side2, side3);
+        triangle.setColor(color);
+        triangle.setFilled(filled);
+
+        System.out.println("The area of the created triangle is " + triangle.getArea());
+        System.out.println("The perimeter of the created triangle is " + triangle.getPerimeter());
+        System.out.println("The color of the created triangle is " + triangle.getColor());
+        System.out.println("The created triangle is " + (triangle.isFilled() ? "" : "not") + "filled");
+
     }
 }
 
