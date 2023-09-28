@@ -19,7 +19,12 @@ public class Main {
         System.out.print("Is the triangle filled? ");
         boolean filled = input.nextBoolean();
 
-        Triangle triangle = new Triangle(side1, side2, side3);
+        Triangle triangle = null;
+        try {
+            triangle = new Triangle(side1, side2, side3);
+        } catch (IllegalTriangleException e) {
+            throw new RuntimeException(e);
+        }
         triangle.setColor(color);
         triangle.setFilled(filled);
 
